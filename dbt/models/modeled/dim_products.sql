@@ -25,6 +25,7 @@ translations as (
 
     -- TODO: select everything from the seed named  product_category_name_translation.
     --       Use ref(), exactly like the products CTE above.
+    SELECT * FROM {{ ref('product_category_name_translation')}}
 
 )
 

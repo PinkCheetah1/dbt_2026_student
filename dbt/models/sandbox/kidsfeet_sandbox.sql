@@ -22,9 +22,12 @@ with kidsfeet as (
 
 kidsfeet_sandbox as (
 
-    select *
+    select
+        sex,
+        count(*) as kids,
+        round(avg(width), 1) as avg_width,
     from kidsfeet
-
+    group by sex
 )
 
 select * from kidsfeet_sandbox
